@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Playfair+Display&display=swap');
+:root{
+--font-title:'Dosis', sans-serif;
+--font-paragraph:'Playfair Display', serif;
+--color-dark-green:#009458;
+--color-light-green:#69BF97;
+--color-background:#F0F0F0;
+--color-graphic-fear:#BA62FF;
+--color-graphic-angry:#FF5E5E;
+--color-graphic-sad:#5DF5FF;
+--color-graphic-happy:#F2EB43;
+--color-graphic-confusion:#77FF48;
+--color-average-face-red:#FF0000;
+--color-average-face-orange:#FF6B00;
+}
+*{
+  box-sizing: border-box;
+  margin: 0%;
+}
+h1, h2, h3, h4{
+  font-family: var(--font-title);
+}
+p{
+  font-family: var(--font-paragraph);
+}
