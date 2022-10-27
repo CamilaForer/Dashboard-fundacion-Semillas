@@ -63,7 +63,7 @@ p{
   padding: 5% 10%;
   text-align: left;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 .activities-info > h3{
   font-weight: normal;
@@ -79,3 +79,234 @@ h4{
 {
   margin-bottom: 10%;
 }
+
+.col-xs-100 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*Barra de Progeso */
+.circle-wrap {
+  width: 150px;
+  height: 150px;
+  background: #d9d7da;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill-1{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .inside-circle {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background: white;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 13px;
+  margin-left: 13px;
+  color: #d9d7da;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+/* color animation */
+.mask .fill-1 {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: var(--color-dark-green);
+}
+
+.mask.full-1,
+.circle .fill-1 {
+  animation: fill-1 ease-in-out 3s;
+  transform: rotate(153deg);
+}
+
+@keyframes fill-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(153deg);
+  }
+}
+.inside-circle::after {
+  content: '85%';
+}
+
+
+@media (min-width: 768px ) and (max-width: 1024px) {
+  .col-md-50 {
+    width: 48%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0% 1%;
+  }
+  h2 {
+    font-size: 42px;
+  }
+  .photo {
+    width: 276px;
+  }
+  .title-secondary{
+    font-size: 35px;
+  }
+  p{
+    font-size: 25px;
+  }
+  h4{
+    font-size: 24px;
+  }
+  .activities-info > h3{
+    font-size: 36px;
+  }
+  .activities-info > h3, 
+  .activities-info > p {
+    margin-bottom: 1%; 
+  }
+
+}
+
+@media (min-width: 1025px){
+  .col-xl-33{
+    width: 33.33%;
+    padding: 1.5%;
+  }
+
+  .col-xl-50 {
+    width: 48%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0% 1%;
+  }
+  .col-xl-66 {
+    width: 66.66%;
+    padding: 1.5%;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .activities-info > h3, 
+  .activities-info > p {
+    margin-bottom: 1%; 
+  }
+  .photo {
+    margin: 1% auto;
+    width: 276px;
+  }
+  h2 {
+    font-size: 57px;
+    margin-bottom: 1.5%;
+  }
+
+  .title-secondary{
+    font-size: 35px;
+  }
+
+  h4{
+    font-size: 24px;
+  }
+  .activities-info > h3{
+    font-size: 36px;
+  }
+
+  .student-info > p {
+    font-size: 25px;
+  }
+  .activities-info > p{
+    font-size: 18px;
+  }
+
+  .activities-info {
+    padding: 2.5% 5%;
+  }
+
+  .container {
+    padding: 0% 2.5%;
+  }
+  .student > h3, 
+  .student > div {
+    margin: 0% 0% 6% 0%;
+  }
+
+  .student > div > h4 {
+    font-size: 20px;
+  }
+
+  /*Barra de progreso */
+  .circle-wrap {
+    width: 200px;
+    height: 200px;
+    background: #d9d7da;
+    border-radius: 50%;
+  }
+  
+  .circle-wrap .circle .mask,
+  .circle-wrap .circle .fill-1{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .circle-wrap .circle .mask {
+    clip: rect(0px, 200px, 200px, 75px);
+  }
+  
+  .circle-wrap .inside-circle {
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+    background: white;
+    line-height: 162px;
+    text-align: center;
+    margin-top: 17px;
+    margin-left: 17px;
+    color: #d9d7da;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  /* color animation */
+  .mask .fill-1 {
+    clip: rect(0px, 80px, 180px, 0px);
+    background-color: var(--color-dark-green);
+  }
+  .mask.full-1, .circle .fill-1 {
+    animation: fill-1 ease-in-out 4s;
+    transform: rotate(130deg);
+  }
+  @keyframes fill-1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(130deg);
+    }
+  }
+  .inside-circle::after {
+    content: '65%';
+  }
+  
+}
+
