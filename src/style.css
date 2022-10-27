@@ -241,3 +241,21 @@ main h1 {
 .global-confusion-percentage{
   background: var(--color-graphic-confusion);
 }
+
+
+
+
+/*Footer*/
+footer{
+  background: var(--color-dark-green);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% ;
+  color: white;
+}
+.social-media img{
+  width: 30px;
+}
+
