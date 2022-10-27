@@ -12,6 +12,8 @@
 --color-graphic-confusion:#77FF48;
 --color-average-face-red:#FF0000;
 --color-average-face-orange:#FF6B00;
+--b_m: none;
+
 }
 *{
   box-sizing: border-box;
@@ -26,11 +28,8 @@ p{
 
 /*    ESTILOS yy    */
 .modal{
-  position: relative;
-  text-align: center;
   margin: auto;
   width: 90%;
-  height: 100px;
   padding: 100px 0px 0px 0px;
   text-align: center;
 }
@@ -45,6 +44,7 @@ p{
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.15s linear;
+
 }
 
 #show-modal:hover{
@@ -76,23 +76,26 @@ p{
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   z-index: 8;
+  border-radius: 6px; /*sombra*/
 }
 
 .modal-in h2{
   padding: 0.5em;
-  color: black;
+  color: white;
   text-align: center;
   margin: 0%;
   background: var(--color-dark-green);
+  border-radius:  6px 6px 0px 0px;
 } 
 
 .modal-in article{
   height: 420px;
   background: var(--color-background);
+  border-radius: 0px 0px 6px 6px;
 }
 
 .close-modal{
-  color: black;
+  color: white;
   position: absolute;
   top: 0.2em;
   right: 0.375em;
@@ -103,14 +106,22 @@ p{
   text-decoration: none;
 }
 
-.modal-in a:hover{
-  color: black;
-  transition: .6s;
+body::before{
+  content: "";
+  position: absolute;
+  display: var(--b_m);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .6);
+  z-index: 7;
 }
 
 .modal-in:target{
   opacity: 1;
   top: 0;
+  
 }
 
 .modal-in .btn-close-modal{
@@ -122,13 +133,27 @@ p{
 }
 
 .modal-in:target .content-modal{
-  top: 50px;
+  top: 100px;
   transition: top .35s ease;
 }
 
 article{
+  overflow: auto;
   justify-content: center;
 }
+
+article::-webkit-scrollbar{
+  width: 10px;
+}
+article::-webkit-scrollbar-track{
+  background:var(--color-light-green);
+  border-radius: 0px 0px 6px 6px;
+}
+article::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color:var(--color-dark-green);
+}
+
 
 ul{
   justify-content: center;
@@ -139,6 +164,9 @@ ul{
 }
 
 .li-modal{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   text-decoration: none;
   color: #009458;
   font-family: var(--font-title);
@@ -172,4 +200,22 @@ ul{
   border: #009458 2px solid;
   border-radius: 6px;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 943px){
+  #show-modal{
+    padding: .5rem 16rem;
+  }
+  .modal-in .conten{
+    width: 90%;
+    max-width: none;
+    left: 5%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:425px){
+  #show-modal{
+    padding: .5rem 5rem;
+  }
 }
