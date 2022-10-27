@@ -21,11 +21,12 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,h6 {
   font-family: var(--font-title);
 }
 p {
   font-family: var(--font-paragraph);
+  font-size: 14px;
 }
 /*Camila-dev*/
 /*Principal*/
@@ -45,7 +46,6 @@ p {
   transform: translateY(-200px);
   background-color: var(--color-dark-green);
   justify-content: space-between;
-  align-items: center;
 }
 .logo {
   padding: 1.5% 0 0 0;
@@ -63,16 +63,28 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 5%;
+  width: 10%;
   height: 50px;
   margin-right: 5%;
   cursor: pointer;
 }
-.menu hr {
-  color: white;
+.menu .line {
+  background: white;
   width: 100%;
-  height: 15px;
+  height: 5px;
   border-radius: 5%;
+}
+.menu .line::after,
+.menu .line::before {
+  display: inline-block;
+  content: "";
+  background: white;
+  width: 100%;
+  height: 5px;
+  border-radius: 5%;
+}
+.menu .line::before {
+  transform: translateY(70%);
 }
 main {
   padding: 0 5% 0 5%;
@@ -89,17 +101,143 @@ main h1 {
   justify-content: center;
 }
 .cards .card {
-  width: 360px;
+  width: 330px;
   text-align: center;
   background: white;
   margin: 0 0 5% 2%;
   box-shadow: 0 12px 16px rgb(0 0 0 / 20%);
 }
-.cards .card p{
+.cards .card p {
   padding: 0% 3%;
 }
 .cards .card:hover {
   transform: translateY(-15px);
   box-shadow: 0 12px 16px rgb(0 0 0 / 20%);
   cursor: pointer;
+}
+/*Grafico emociones globales*/
+.global-emotions-chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 100%;
+}
+.center-date {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+}
+.recorte {
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.piece {
+  border-radius: 50%;
+  clip: rect(0px, 100px, 200px, 0px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+#fear {
+  transform: rotate(0deg);
+}
+
+#fear .piece {
+  background-color: var(--color-graphic-fear);
+  transform: rotate(18deg);
+}
+#angry {
+  transform: rotate(-18deg);
+}
+#angry .piece {
+  background-color: var(--color-graphic-angry);
+  transform: rotate(16deg);
+}
+#sad {
+  transform: rotate(-60deg);
+}
+#sad .piece {
+  background-color: var(--color-graphic-sad);
+  transform: rotate(40deg);
+}
+#confusion {
+  transform: rotate(192deg);
+}
+#confusion .piece {
+  background-color: var(--color-graphic-confusion);
+  transform: rotate(105deg);
+}
+#happy {
+  transform: rotate(10deg);
+}
+#happy .piece {
+  background-color: var(--color-graphic-happy);
+  transform: rotate(190deg);
+}
+.dots {
+  margin-top: 30%;
+  margin-bottom: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+  width: 60px;
+  height: 30px;
+  background: radial-gradient(circle closest-side,#009458 90%,#0000) 0%   50%,
+  radial-gradient(circle closest-side,#009458 90%,#0000) 50%  50%,
+  radial-gradient(circle closest-side,#009458 90%,#0000) 100% 50%;
+  background-size: calc(100%/3) 13.4px;
+  background-repeat: no-repeat;
+  animation: dots 1s infinite linear;
+}
+@keyframes dots {
+  20% {
+     background-position: 0%   0%, 50%  50%,100%  50%;
+  }
+  40% {
+     background-position: 0% 100%, 50%   0%,100%  50%;
+  }
+  60% {
+     background-position: 0%  50%, 50% 100%,100%   0%;
+  }
+  80% {
+     background-position: 0%  50%, 50%  50%,100% 100%;
+  }
+}
+.global-emotions{
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.global-fear-percentage,.global-happy-percentage, .global-angry-percentage,
+.global-sad-percentage, .global-confusion-percentage{
+  width: 10px;
+  height: 10px;
+  font-size: 14px;
+  background: var(--color-graphic-fear);
+}
+.global-happy-percentage{
+  background:var(--color-graphic-happy);
+}
+.global-angry-percentage{
+  background:var(--color-graphic-angry) ;
+}
+.global-sad-percentage{
+  background: var(--color-graphic-sad);
+}
+.global-confusion-percentage{
+  background: var(--color-graphic-confusion);
 }
