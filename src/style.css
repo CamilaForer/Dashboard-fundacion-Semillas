@@ -33,22 +33,28 @@ p {
 .figure1 {
   position: relative;
   background: var(--color-dark-green);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 47.5%, 0% 65.8%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 80%);
   width: 100%;
   height: 200px;
 }
+/*@media (min-width: 769px){
+  .figure1{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 80%);
+  }
+}*/
 .header {
   position: absolute;
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 60px;
   padding: 1.5% 0;
   transform: translateY(-200px);
   background-color: var(--color-dark-green);
   justify-content: space-between;
 }
 .logo {
-  padding: 1.5% 0 0 0;
+  padding: 1% 0 1% 0;
   height: 75px;
   padding-left: 5%;
   background-color: var(--color-dark-green);
@@ -63,7 +69,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 10%;
+  width: 3rem;
   height: 50px;
   margin-right: 5%;
   cursor: pointer;
@@ -94,6 +100,13 @@ main h1 {
   text-align: center;
 }
 /*Graduate cards*/
+a{
+  text-decoration: none;
+  color: black;
+}
+a:visited{
+  color: black;
+}
 .cards {
   position: relative;
   display: flex;
@@ -258,4 +271,3 @@ footer{
 .social-media img{
   width: 30px;
 }
-
