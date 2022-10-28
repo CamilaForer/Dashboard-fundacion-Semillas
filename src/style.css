@@ -25,6 +25,18 @@ h4,
 h6 {
   font-family: var(--font-title);
 }
+h1{
+  font-size: 50px;
+}
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 30px;
+}
+h4{
+  font-size: 20px;
+}
 p {
   font-family: var(--font-paragraph);
   font-size: 14px;
@@ -289,11 +301,7 @@ a:visited {
   font-weight: normal;
   font-size: 20px;
 }
-h4{
-  font-weight: normal;
-  text-align: center;
-  padding: 5% 0%;
-}
+
 .activities-info > h3,
 .activities-info > p
 {
@@ -364,7 +372,7 @@ h4{
 .average{
   display: flex;
   flex-direction:column;
-  width:60%;
+  width:70%;
   height: 106px;
 }
 .average-face{
@@ -433,7 +441,7 @@ h4{
   height: 100%;
   background-color: var(--color-average-face-red);
   transform: translateX(-100%);
-  animation: fill-bar 3s 0.7s ease-in-out forwards;
+  animation: fill-bar 2s 0.7s ease-in-out forwards;
 }
 @keyframes fill-bar {
   to{
@@ -653,7 +661,7 @@ background-color: var(--color-graphic-confusion);
   height: 15px;
   font-size: 14px;
   border-radius: 50%;
-  margin-left: 5%;
+  margin-left: 6%;
   background: var(--color-graphic-fear);
 }
 .sad-bar{
@@ -696,9 +704,6 @@ footer{
     display: flex;
     margin: 0% 1%;
   }
-  h2 {
-    font-size: 42px;
-  }
   .photo {
     width: 276px;
   }
@@ -706,12 +711,6 @@ footer{
     font-size: 35px;
   }
 
-  h4{
-    font-size: 24px;
-  }
-  .activities-info > h3{
-    font-size: 36px;
-  }
   .activities-info > h3, 
   .activities-info > p {
     margin-bottom: 1%; 
@@ -757,28 +756,12 @@ footer{
     width: 276px;
   }
   h2 {
-    font-size: 57px;
     margin-bottom: 1.5%;
   }
 
   .title-secondary{
     font-size: 35px;
   }
-
-  h4{
-    font-size: 24px;
-  }
-  .activities-info > h3{
-    font-size: 36px;
-  }
-
-  .student-info > p {
-    font-size: 25px;
-  }
-  .activities-info > p{
-    font-size: 18px;
-  }
-
   .activities-info {
     padding: 2.5% 5%;
   }
@@ -790,11 +773,6 @@ footer{
   .student > div {
     margin: 0% 0% 6% 0%;
   }
-
-  .student > div > h4 {
-    font-size: 20px;
-  }
-
   /*Barra de progreso */
   .circle-wrap {
     width: 200px;
