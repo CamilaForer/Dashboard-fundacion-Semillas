@@ -46,6 +46,21 @@ p{
   transition: all 0.15s linear;
 
 }
+body::before{
+  content: "";
+  position: absolute;
+  display: var(--b_m);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .6);
+  z-index: 7;
+}
+
+:root:has(.modal-in:target){
+  --b_m: block;
+}
 
 #show-modal:hover{
   cursor: pointer;
@@ -106,22 +121,14 @@ p{
   text-decoration: none;
 }
 
-body::before{
-  content: "";
-  position: absolute;
-  display: var(--b_m);
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, .6);
-  z-index: 7;
+.modal-in a:hover{
+  color: black;
+  transition: .6s;
 }
 
 .modal-in:target{
   opacity: 1;
   top: 0;
-  
 }
 
 .modal-in .btn-close-modal{
@@ -137,25 +144,26 @@ body::before{
   transition: top .35s ease;
 }
 
-article{
+.article-modal{
   overflow: auto;
   justify-content: center;
 }
 
-article::-webkit-scrollbar{
+.article-modal::-webkit-scrollbar{
   width: 10px;
 }
-article::-webkit-scrollbar-track{
+
+.article-modal::-webkit-scrollbar-track{
   background:var(--color-light-green);
   border-radius: 0px 0px 6px 6px;
 }
-article::-webkit-scrollbar-thumb{
+.article-modal::-webkit-scrollbar-thumb{
   border-radius: 5px;
   background-color:var(--color-dark-green);
 }
 
 
-ul{
+.ul-modal{
   justify-content: center;
   text-align: center;
   list-style: none;
@@ -176,7 +184,7 @@ ul{
 
 .li-modal-list{
   position: relative;
-  padding: 5px 0px;
+  padding: 0px;
   margin: 10px auto;
   width: 300px;
   text-decoration: none;
@@ -190,7 +198,7 @@ ul{
 
 .li-modal-list-first{
   position: relative;
-  padding: 5px 0px;
+  padding: 0px;
   margin: 5px auto;
   width: 300px;
   text-decoration: none;
