@@ -472,3 +472,64 @@ footer{
 }
 
 
+/*Diagrama de barras*/
+
+.line-graph {
+  height: 350px;
+}
+
+.line-1 {
+  clip-path:polygon(0% 22%, 10% 27%, 20% 44%, 30% 66%, 40% 74%, 50% 55%, 60% 48%, 70% 41%, 80% 41%, 90% 43%, 90% 45%, 80% 43%, 70% 43%, 60% 50%, 50% 57%, 40% 76%, 30% 68%, 20% 46%, 10% 29%, 0% 24%);  background-color: var(--color-graphic-confusion);
+  height: 200px;
+  margin: 0% 0% 0% 20%;
+}
+
+.line-2 {
+  clip-path: polygon(0% 20%, 10% 10%, 20% 41%, 30% 50%, 40% 43%, 50% 40%, 60% 17%, 70% 36%, 80% 58%, 90% 16%, 90% 18%, 80% 60%, 70% 38%, 60% 19%, 50% 42%, 40% 45%, 30% 52%, 20% 43%, 10% 12%, 0% 22%);
+  background-color: var(--color-graphic-fear);
+  height: 200px;
+  margin: 0% 0% 0% 20%;
+  transform: translate(0px, -200px);
+}
+
+.line-3 {
+  clip-path:polygon(0% 98%, 10% 90%, 20% 91%, 30% 80%, 40% 79%, 50% 90%, 60% 77%, 70% 86%, 80% 88%, 90% 96%, 90% 98%, 80% 90%, 70% 88%, 60% 79%, 50% 92%, 40% 81%, 30% 82%, 20% 93%, 10% 92%, 0% 100%);
+  background-color: var(--color-graphic-angry);
+  height: 200px;
+  margin: 0% 0% 0% 20%;
+  transform: translate(0px, -400px);
+}
+
+.line-4 {
+  clip-path: polygon(0% 0%, 10% 20%, 20% 21%, 30% 30%, 40% 29%, 50% 20%, 60% 37%, 70% 36%, 80% 48%, 90% 76%, 90% 78%, 80% 50%, 70% 38%, 60% 39%, 50% 22%, 40% 31%, 30% 32%, 20% 23%, 10% 22%, 0% 2%);
+  background-color: var(--color-graphic-happy);
+  height: 200px;
+  margin: 0% 0% 0% 20%;
+  transform: translate(0px, -600px);
+}
+
+.line-5 {
+  clip-path: polygon(0% 52%, 10% 40%, 20% 51%, 30% 35%, 40% 49%, 50% 31%, 60% 28%, 70% 26%, 80% 28%, 90% 26%, 90% 28%, 80% 30%, 70% 28%, 60% 30%, 50% 33%, 40% 51%, 30% 37%, 20% 53%, 10% 42%, 0% 54%);
+  background-color: var(--color-graphic-sad);
+  height: 200px;
+  margin: 0% 0% 0% 20%;
+  transform: translate(0px, -800px);
+}
+
+.line-percentage {
+  margin-top: -243%;
+  z-index: 1;
+  margin-left: -80%;
+  height: 100%;
+}
+
+.line-percentage > p {
+  height: 5.5%;
+}
+
+.line-label {
+  margin-top: -32%;
+  z-index: 1;
+  margin-left: 19%;
+  display: flex;
+}
