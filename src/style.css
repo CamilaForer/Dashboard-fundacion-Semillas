@@ -940,6 +940,9 @@ body::before{
   font-size: 1.5em; 
   text-decoration: none;
 }
+a.close-modal:visited{
+  color: white;
+}
 .modal-in a:hover{
   color: black;
   transition: .6s;
