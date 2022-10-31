@@ -228,6 +228,80 @@ a:visited {
   margin: 0% 0% 3% 0%;
 }
 
+
+/*Diagrama de lineas*/
+.quiz-chartTip {
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  background-color: rgba(255,255,255,.9);
+  box-shadow: 3px 3px 10px rgba(0,0,0,.1);
+  position: absolute;
+  z-index: 50;
+  max-width: 250px;
+}
+
+.quiz-graph {
+  padding: 10px; 
+  height: 220px;
+  width: 100%;
+}
+
+.quiz-graph .x-labels {
+  text-anchor: middle;
+}
+
+.quiz-graph .y-labels {
+  text-anchor: end;
+}
+
+.label-title {
+  text-anchor: middle;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: gray;
+}
+.global-emotions {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.global-fear-percentage,
+.global-happy-percentage,
+.global-angry-percentage,
+.global-sad-percentage,
+.global-confusion-percentage {
+  width: 10px;
+  height: 10px;
+  font-size: 14px;
+  background: var(--color-graphic-fear);
+}
+.global-happy-percentage {
+  background: var(--color-graphic-happy);
+}
+.global-angry-percentage {
+  background: var(--color-graphic-angry);
+}
+.global-sad-percentage {
+  background: var(--color-graphic-sad);
+}
+.global-confusion-percentage {
+  background: var(--color-graphic-confusion);
+}
+
+.global-emotions > span,
+.global-emotions > p
+{
+    margin: 0 2px;
+}
+
+
+
+/* estudiante */
 .photo{
   margin: 4% auto 1% auto;
 }
@@ -382,7 +456,7 @@ h4{
   display: flex;
   flex-wrap: wrap;
 }
-.sub_tag_board>div{
+.sub_tag_board > p{
   width: 100%;
   height: 9.7%;
 }
@@ -409,6 +483,10 @@ background-color: var(--color-graphic-confusion);
 
 
 @media (min-width: 768px ) and (max-width: 1024px) {
+  
+  .quiz-graph {
+    height: 300px;
+  }
   .col-md-50 {
     width: 48%;
     flex-direction: column;
