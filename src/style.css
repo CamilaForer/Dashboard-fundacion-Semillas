@@ -284,3 +284,28 @@ box-shadow: 2px 2px 3px rgb(0 0 0 / 20%); /* Sombra */
     width: 200px;
   }
 }
+
+.tittle-effect{
+  text-align: center;
+  position: relative;
+  display: block;
+  padding: 5px;
+}
+
+.tittle-effect::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(to right, #69BF97, #009458, #69BF97);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.tittle-effect:hover::before {
+  transform: scaleX(1);
+}
