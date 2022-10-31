@@ -285,12 +285,7 @@ a:visited {
 .photo{
   margin: 4% auto 1% auto;
 }
-.title-secondary {
-  width: 100%;
-  background-color: var(--color-light-green);
-  font-weight: normal;
-  padding: 1%;
-}
+
 .bg-white {
   background-color: white;
 }
@@ -890,7 +885,7 @@ body::before{
   text-decoration: none;
   transition: all 0.15s linear;
   margin: 5px 0px;
-  padding: 10px 0px;
+  padding: 0px 0px;
   box-shadow: 2px 2px 3px rgb(0 0 0 / 20%); /* Sombra */
 }
 .btn-modal:hover{
@@ -904,7 +899,6 @@ body::before{
   z-index: 10;
   background: rgba(0, 0, 0, 0.1);
   width: 100vw;
-  height: 100hv;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
