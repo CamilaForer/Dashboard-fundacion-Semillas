@@ -95,7 +95,7 @@ main h1 {
 }
 
 /*    ESTILOS yy    */
-/*Modal Menú*/
+/*Modal Menú, Actividades, Estudiantes, Gráfica de líneas*/
 hr{
   height: 6px;
   background: white;
@@ -138,6 +138,8 @@ body::before{
   transition: all 0.15s linear;
   margin: 5px 0px;
   padding: 10px 0px;
+box-shadow: 2px 2px 3px rgb(0 0 0 / 20%); /* Sombra */
+
 }
 
 .btn-modal:hover{
@@ -277,7 +279,7 @@ body::before{
 .li-modal-list-first{
   position: relative;
   padding: 0px;
-  margin: 5px auto;
+  margin: 4px auto;
   width: 300px;
   text-decoration: none;
   color: #009458;
