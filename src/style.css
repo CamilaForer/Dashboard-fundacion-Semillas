@@ -856,31 +856,47 @@ footer{
     width: 95%;
     margin-left: 10%;
   }
-
 }
 /*    ESTILOS yy    */
+/*Modal Menú, Actividades, Estudiantes, Gráfica de líneas*/
+
 .modal{
   margin: auto;
   width: 90%;
-  padding: 100px 0px 0px 0px;
+  padding: 0px;
   text-align: center;
 }
 #show-modal{
   color: black;
+  text-decoration: none;
+}
+body::before{
+  content: "";
+  position: fixed;
+  display: var(--b_m);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .6);
+  z-index: 7;
+}
+:root:has(.modal-in:target){
+  --b_m: block;
+}
+.btn-modal{
   background: var(--color-light-green);
-  padding: .5rem 23rem;
-  font-family: var(--font-title);
-  font-weight: bold;
-  font-size: 1.5rem;
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.15s linear;
+  margin: 5px 0px;
+  padding: 10px 0px;
+  box-shadow: 2px 2px 3px rgb(0 0 0 / 20%); /* Sombra */
 }
-#show-modal:hover{
+.btn-modal:hover{
   cursor: pointer;
   background: var(--color-dark-green);
 }
-
 .modal-in{
   position: fixed;
   top: -100hv;
@@ -892,7 +908,6 @@ footer{
   opacity: 0;
   transition: opacity 0.35s ease;
 }
-
 .modal-in .content-modal{
   width: 100%;
   max-width: 500px;
@@ -907,7 +922,6 @@ footer{
   z-index: 8;
   border-radius: 6px; /*sombra*/
 }
-
 .modal-in h2{
   padding: 0.5em;
   color: white;
@@ -916,13 +930,11 @@ footer{
   background: var(--color-dark-green);
   border-radius:  6px 6px 0px 0px;
 } 
-
 .modal-in article{
   height: 420px;
   background: var(--color-background);
   border-radius: 0px 0px 6px 6px;
 }
-
 .close-modal{
   color: white;
   position: absolute;
@@ -931,28 +943,17 @@ footer{
   margin: 0%;
   padding: 5px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5em; 
   text-decoration: none;
 }
-
-body::before{
-  content: "";
-  position: absolute;
-  display: var(--b_m);
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, .6);
-  z-index: 7;
+.modal-in a:hover{
+  color: black;
+  transition: .6s;
 }
-
 .modal-in:target{
   opacity: 1;
   top: 0;
-  
 }
-
 .modal-in .btn-close-modal{
   position: absolute;
   left: 0%;
@@ -960,38 +961,32 @@ body::before{
   height: 100%;
   z-index: 9;
 }
-
 .modal-in:target .content-modal{
   top: 100px;
   transition: top .35s ease;
 }
-
-article{
+.article-modal{
   overflow: auto;
   justify-content: center;
 }
-
-article::-webkit-scrollbar{
+.article-modal::-webkit-scrollbar{
   width: 10px;
 }
-article::-webkit-scrollbar-track{
+.article-modal::-webkit-scrollbar-track{
   background:var(--color-light-green);
   border-radius: 0px 0px 6px 6px;
 }
-article::-webkit-scrollbar-thumb{
+.article-modal::-webkit-scrollbar-thumb{
   border-radius: 5px;
   background-color:var(--color-dark-green);
 }
-
-
-ul{
+.ul-modal{
   justify-content: center;
   text-align: center;
   list-style: none;
   padding: 10px 0px;
   margin: 0px;
 }
-
 .li-modal{
   justify-content: center;
   display: flex;
@@ -1002,10 +997,9 @@ ul{
   font-size: 20px;
   padding: 10px 90px;
 }
-
 .li-modal-list{
   position: relative;
-  padding: 5px 0px;
+  padding: 0px;
   margin: 10px auto;
   width: 300px;
   text-decoration: none;
@@ -1016,11 +1010,10 @@ ul{
   border-radius: 6px;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
 }
-
 .li-modal-list-first{
   position: relative;
-  padding: 5px 0px;
-  margin: 5px auto;
+  padding: 0px;
+  margin: 4px auto;
   width: 300px;
   text-decoration: none;
   color: #009458;
@@ -1030,21 +1023,22 @@ ul{
   border-radius: 6px;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
 }
-
 @media (max-width: 943px){
-  #show-modal{
-    padding: .5rem 16rem;
-  }
-  .modal-in .conten{
+  .content-modal{
     width: 90%;
     max-width: none;
     left: 5%;
     margin-left: 0;
   }
 }
-
-@media (max-width:425px){
-  #show-modal{
-    padding: .5rem 5rem;
+@media (max-width: 550px){
+  .modal-in .content-modal{
+    width: 80%;
+    max-width: none;
+    left: 10%;
+    margin-left: 0;
+  }
+  .li-modal-list-first, .li-modal-list{
+    width: 200px;
   }
 }
