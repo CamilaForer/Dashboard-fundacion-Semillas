@@ -17,3 +17,24 @@ Vista
 <p align="center"> 
  <img src="https://user-images.githubusercontent.com/86115727/199054333-68511823-6c47-4464-8835-4d8399aea773.png">
 </p>
+<p>Realizamos las tarjetas de información de los diplomados con sus respectivas graficas</p>
+<p align="center"> 
+ <img src="https://user-images.githubusercontent.com/86115727/199066331-f90bb584-03f5-4da8-a4e2-ba43a3c6b900.png">
+</p>
+Cada tarjeta tiene un hover que hace que se mueva un poco hacia arriba facilitando también la vista de la tarjeta a seleccionar.
+<p>Código</p>
+<p align="center"> 
+ <img src="https://user-images.githubusercontent.com/86115727/199073939-055328de-52de-4689-86dd-4dde857adbc9.png">
+</p>
+Además se añade animación que simula la carga del contenido de las tarjetas
+<p align="center"> 
+ <img src="https://user-images.githubusercontent.com/86115727/199074290-294862f3-265f-48ec-913c-3c6a94e359d9.png">
+</p>
+
+
+
+Para la grafica de barras se hicieron caritas con ayuda de CSS y un hover que las hce cambiar de color
+<p align="center"> 
+ <img src="https://user-images.githubusercontent.com/86115727/199075694-e2a91016-a48d-4825-a5c4-14b7c6184937.png">
+</p>
+
