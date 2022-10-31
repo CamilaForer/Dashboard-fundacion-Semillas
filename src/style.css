@@ -42,6 +42,80 @@ p{
   margin: 0% 0% 3% 0%;
 }
 
+
+/*Diagrama de lineas*/
+.quiz-chartTip {
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 4px;
+  background-color: rgba(255,255,255,.9);
+  box-shadow: 3px 3px 10px rgba(0,0,0,.1);
+  position: absolute;
+  z-index: 50;
+  max-width: 250px;
+}
+
+.quiz-graph {
+  padding: 10px; 
+  height: 220px;
+  width: 100%;
+}
+
+.quiz-graph .x-labels {
+  text-anchor: middle;
+}
+
+.quiz-graph .y-labels {
+  text-anchor: end;
+}
+
+.label-title {
+  text-anchor: middle;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: gray;
+}
+.global-emotions {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.global-fear-percentage,
+.global-happy-percentage,
+.global-angry-percentage,
+.global-sad-percentage,
+.global-confusion-percentage {
+  width: 10px;
+  height: 10px;
+  font-size: 14px;
+  background: var(--color-graphic-fear);
+}
+.global-happy-percentage {
+  background: var(--color-graphic-happy);
+}
+.global-angry-percentage {
+  background: var(--color-graphic-angry);
+}
+.global-sad-percentage {
+  background: var(--color-graphic-sad);
+}
+.global-confusion-percentage {
+  background: var(--color-graphic-confusion);
+}
+
+.global-emotions > span,
+.global-emotions > p
+{
+    margin: 0 2px;
+}
+
+
+
+/* estudiante */
 .photo{
   margin: 4% auto 1% auto;
 }
@@ -223,6 +297,10 @@ background-color: var(--color-graphic-confusion);
 
 
 @media (min-width: 768px ) and (max-width: 1024px) {
+  
+  .quiz-graph {
+    height: 300px;
+  }
   .col-md-50 {
     width: 48%;
     flex-direction: column;
@@ -472,73 +550,3 @@ footer{
 }
 
 
-/*Diagrama de barras*/
-
-.line-graph {
-  height: 350px;
-}
-
-.line-1 {
-  clip-path:polygon(0% 22%, 10% 27%, 20% 44%, 30% 66%, 40% 74%, 50% 55%, 60% 48%, 70% 41%, 80% 41%, 90% 43%, 90% 45%, 80% 43%, 70% 43%, 60% 50%, 50% 57%, 40% 76%, 30% 68%, 20% 46%, 10% 29%, 0% 24%);  background-color: var(--color-graphic-confusion);
-  height: 200px;
-  margin: 0% 0% 0% 20%;
-}
-
-.line-2 {
-  clip-path: polygon(0% 20%, 10% 10%, 20% 41%, 30% 50%, 40% 43%, 50% 40%, 60% 17%, 70% 36%, 80% 58%, 90% 16%, 90% 18%, 80% 60%, 70% 38%, 60% 19%, 50% 42%, 40% 45%, 30% 52%, 20% 43%, 10% 12%, 0% 22%);
-  background-color: var(--color-graphic-fear);
-  height: 200px;
-  margin: 0% 0% 0% 20%;
-  transform: translate(0px, -200px);
-}
-
-.line-3 {
-  clip-path:polygon(0% 98%, 10% 90%, 20% 91%, 30% 80%, 40% 79%, 50% 90%, 60% 77%, 70% 86%, 80% 88%, 90% 96%, 90% 98%, 80% 90%, 70% 88%, 60% 79%, 50% 92%, 40% 81%, 30% 82%, 20% 93%, 10% 92%, 0% 100%);
-  background-color: var(--color-graphic-angry);
-  height: 200px;
-  margin: 0% 0% 0% 20%;
-  transform: translate(0px, -400px);
-}
-
-.line-4 {
-  clip-path: polygon(0% 0%, 10% 20%, 20% 21%, 30% 30%, 40% 29%, 50% 20%, 60% 37%, 70% 36%, 80% 48%, 90% 76%, 90% 78%, 80% 50%, 70% 38%, 60% 39%, 50% 22%, 40% 31%, 30% 32%, 20% 23%, 10% 22%, 0% 2%);
-  background-color: var(--color-graphic-happy);
-  height: 200px;
-  margin: 0% 0% 0% 20%;
-  transform: translate(0px, -600px);
-}
-
-.line-5 {
-  clip-path: polygon(0% 52%, 10% 40%, 20% 51%, 30% 35%, 40% 49%, 50% 31%, 60% 28%, 70% 26%, 80% 28%, 90% 26%, 90% 28%, 80% 30%, 70% 28%, 60% 30%, 50% 33%, 40% 51%, 30% 37%, 20% 53%, 10% 42%, 0% 54%);
-  background-color: var(--color-graphic-sad);
-  height: 200px;
-  margin: 0% 0% 0% 20%;
-  transform: translate(0px, -800px);
-}
-
-.line-percentage {
-  margin-top: -243%;
-  z-index: 1;
-  margin-left: -80%;
-  height: 100%;
-}
-
-.line-percentage > p {
-  height: 5.5%;
-}
-
-.line-label {
-  margin-top: -32%;
-  z-index: 1;
-  margin-left: 19%;
-  display: flex;
-}
-
-.c{
-  position: relative;
-}
-
-.a {
-  position: absolute;
-  z-index: 99;
-}
