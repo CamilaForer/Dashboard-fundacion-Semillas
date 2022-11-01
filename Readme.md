@@ -27,4 +27,4 @@ La aplicación tendrá como público objetivo el área de dirección de la funda
 <h3>Conclusión</h3>
 Se desarrolló una aplicación web para la Fundación Semillas que muestra un dashboard  con indicadores sobre las emociones que cada alumno puede llegar a sentir durante el desarrollo de su formación por cada actividad que realiza.
 <h3>Despliegue</h3>
-<a href:="https://camilaforer.github.io/Dashboard-fundacion-Semillas/">Despliegue con Github pages</a>
+<a href="https://camilaforer.github.io/Dashboard-fundacion-Semillas/">Despliegue con Github pages</a>
