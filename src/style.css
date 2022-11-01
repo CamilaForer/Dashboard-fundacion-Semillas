@@ -44,7 +44,6 @@ p {
   display: block;
   padding: 5px;
 }
-
 .tittle-effect::before{
   content: '';
   position: absolute;
@@ -58,11 +57,9 @@ p {
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
 }
-
 .tittle-effect:hover::before {
   transform: scaleX(1);
 }
-
 /*Camila-dev*/
 /*Principal*/
 .figure1 {
@@ -239,7 +236,7 @@ a:visited {
 }
 .global-emotions {
   margin: auto;
-  width: 57%;
+  width:100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -255,6 +252,7 @@ a:visited {
   height: 10px;
   font-size: 14px;
   background: var(--color-graphic-fear);
+  margin-right: 2%;
 }
 .global-happy-percentage {
   background: var(--color-graphic-happy);
@@ -725,6 +723,13 @@ background-color: var(--color-graphic-confusion);
   justify-content: center;
   align-items: center;
 }
+.emotion{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2%;
+}
+
 .fear-bar,.sad-bar, .happy-bar, .confusion-bar,.angry-bar{
   width: 25px;
   height: 25px;
@@ -804,10 +809,7 @@ body::before{
   top: -100hv;
   left: 0;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.1);
   width: 100vw;
-  opacity: 0;
-  transition: opacity 0.35s ease;
 }
 .modal-in .content-modal{
   width: 100%;
@@ -969,9 +971,6 @@ a.close-modal:visited{
   }
   .li-modal-list-first, .li-modal-list{
     width: 200px;
-  }
-  .global-emotions{
-    width: 64%;
   }
 }
 @media (max-width:767px) {
