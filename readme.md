@@ -31,10 +31,80 @@ Además se añade animación que simula la carga del contenido de las tarjetas
  <img src="https://user-images.githubusercontent.com/86115727/199074290-294862f3-265f-48ec-913c-3c6a94e359d9.png">
 </p>
 
+<h3>Vista Diplomado</h3> 
+    <h4>Maqueta</h4> 
+    <p>Para posicionar el contenido y darle margin se utilizó las clases <b>container</b> y <b>contenido</b>. Internamente se dividio el contenido en dos partes: la primera corresponde a la información del estudiante y la segunda comprende las información gráfica de las emociones por actividad.</p> 
+    <p align="center">Código</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199116824-79b8dbf6-a3f8-443f-a775-43b893f296fc.png" 
+      /> 
+    </p> 
+ <h4>Información del estudiante</h4> 
+    <p>Para realizar la gráfica <b>Promedio Emocional 2022</b> se utilizó el formato vectorial <b>SVG</b>. El motivo de esta elección fueron los inconvenientes presentados para crear y posicionar las lineas interiores con los elementos <b>clip-path</b> y la técnica de <b>triángulos con un solo borde</b>.</p> 
+    <p align="center">Problema</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199121173-fa72fba7-bb73-4e43-b568-e450855425b9.PNG" 
+        width="470" 
+      /> 
+    </p>Dentro del elemento SVG se utlizaron dos <b>polyline</b> para los ejes de la gráfica y cinco más para las líneas que representan las emociones. Para la leyenda de los ejes se utilizaron etiquetas se utlizarón las etiquetas <b>g</b> y <b>text</b>. 
+    <p align="center">Código</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199124482-04e7a854-7606-4ba2-92ad-24e6ce5e894a.png" 
+        width="470px" 
+      /> 
+    </p> 
+    <p align="center">Vista</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199127097-03e89f6c-66f0-4480-8f3f-a98ce2207ed3.png" 
+        width="470px" 
+      /> 
+    </p> 
+    <h4>Actividades</h4> 
+    <p> 
+      Para realizar la gráfica de <b>Entregas</b>  se utilizarón las clases : <b>circle-wrap</b> para dar dimensiones y forma al elemento padre (circulo exterior); las clase <b>mask full-1</b> y <b>fill-1</b> para dar la animación de que el circulo se rellena cuando la página se carga y; la clase <b>inside-circle</b> para dar la forma de anillo. 
+    </p> 
+    <p align="center">Código</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199245265-33d2af6d-8078-4f9d-b287-2e9b0d607cf4.png" 
+        width="470px" 
+      /> 
+    </p> 
+    <p align="center">Vista</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199245420-d9d51c2f-c44a-4c8f-8679-de05d9643944.png" 
+        width="470px" 
+      /> 
+    </p> 
+    <p> 
+      Para realizar el <b>Diagrama de Barras de Emociones</b> se crearon las clases <b>board</b> y <b>sub_board</b> para dar dimensiones al contenido. Dentro se ubicaron las barras y la leyenda del eje vertical con las clases <b>graf_board</b>, <b>barra</b>, <b>tag_board</b>, <b>sub_tag_board</b>, entre otras. 
+    </p> 
+    <p align="center">Código</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199248499-1c8a195d-c64a-42b3-8639-826c6d84b3e8.png" 
+        width="470px" 
+      /> 
+    </p> 
+    <p align="center">Vista</p> 
+    <p align="center"> 
+      <img 
+        src="https://user-images.githubusercontent.com/92338030/199248643-0b183428-8683-4f54-b977-f414cbbd9b35.png" 
+        width="470px" 
+      /> 
+    </p>
 
-
-Para la grafica de barras se hicieron caritas con ayuda de CSS y un hover que las hce cambiar de color
+Para la grafica de barras se hicieron caritas con ayuda de CSS y un hover que las hace cambiar de color
 <p align="center"> 
  <img src="https://user-images.githubusercontent.com/86115727/199075694-e2a91016-a48d-4825-a5c4-14b7c6184937.png">
 </p>
+<p align="center"> 
+ <img src="https://user-images.githubusercontent.com/86115727/199252908-9235de3e-ffe3-45f7-8be8-8b9fb072eb91.png">
+</p>
+
 
