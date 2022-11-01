@@ -307,6 +307,7 @@ a:visited {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 5px;
   margin: 0% 0% 3% 0%;
+  padding-top: 2%;
 }
 /*Diagrama de lineas*/
 .line-graphic{
@@ -839,7 +840,7 @@ body::before{
   border-radius: 6px;
 }
 .modal-in h3{
-  padding: 0.5em;
+  padding: 0.3em;
   color: white;
   text-align: center;
   margin: 0%;
@@ -850,13 +851,14 @@ body::before{
   height: 420px;
   background: var(--color-background);
   border-radius: 0px 0px 6px 6px;
+
 }
 .close-modal{
   color: white;
   position: absolute;
   right: 0;
   margin:auto;
-  top:-5px;
+  top:0px;
   padding: 0 25px 0 0px;
   font-weight: bold;
   font-size: 1.5em; 
@@ -881,11 +883,11 @@ a.close-modal:visited{
   z-index: 9;
 }
 .modal-in:target .content-modal{
-  top: 100px;
+  top: 10%;
   transition: top .35s ease;
 }
 .modal-in:target .content-line-graphic{
-  top: 100px;
+  top: 10%;
   transition: top .35s ease;
 }
 .article-modal{
