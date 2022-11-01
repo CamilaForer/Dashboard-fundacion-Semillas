@@ -248,8 +248,8 @@ a:visited {
 .global-angry-percentage,
 .global-sad-percentage,
 .global-confusion-percentage {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   font-size: 14px;
   background: var(--color-graphic-fear);
   margin-right: 2%;
@@ -727,7 +727,7 @@ background-color: var(--color-graphic-confusion);
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 2%;
+  margin-left: 1%;
 }
 
 .fear-bar,.sad-bar, .happy-bar, .confusion-bar,.angry-bar{
